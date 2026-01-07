@@ -92,8 +92,7 @@ Ngày nhận phòng (check_in)
 
 select g.guest_name, r.room_type, b.check_in from bookings b
 join guests g on g.guest_id = b.guest_id
-join rooms r on r.room_id = b.room_id
-group by g.guest_id, r.room_id;
+join rooms r on r.room_id = b.room_id;
 
 -- Cho biết mỗi khách đã đặt phòng bao nhiêu lần
 
