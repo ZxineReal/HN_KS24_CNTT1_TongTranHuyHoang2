@@ -122,8 +122,8 @@ having count(g.guest_id) >= 2;
 
 -- Tìm loại phòng có số lượt đặt phòng nhiều nhất
 
-select r.room_type, count(b.booking_id) as 'total_booking' from rooms r
-join bookings b on b.room_id = b.room_id
+select r.room_type, count(b.booking_id) as total_booking from rooms r
+join bookings b on b.room_id = r.room_id
 group by r.room_type 
 order by total_booking desc 
 limit 1
